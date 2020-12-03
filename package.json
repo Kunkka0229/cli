@@ -1,18 +1,18 @@
 {
-  "name": "xdf-cli",
-  "version": "1.0.0",
-  "description": "cli",
-  "main": "index.js",
-  "scripts": {},
-  "bin": {
-    "xdf-build": "./bin/xdf-build.js"
-  },
-  "author": "lijinxing",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^6.2.0",
-    "download-git-repo": "^3.0.2",
-    "ora": "^5.1.0"
-  }
+    "name": "xdf-usercenter-cli",
+    "version": "1.0.0",
+    "description": "cli",
+    "main": "index.js",
+    "scripts": {},
+    "bin": {
+        "xdf-build": "./bin/xdf-build.js"
+    },
+    "author": "lijinxing",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "commander": "^6.2.0",
+        "download-git-repo": "^3.0.2",
+        "ora": "^5.1.0"
+    }
 }
