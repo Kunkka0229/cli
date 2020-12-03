@@ -12,7 +12,7 @@ program.version(requiredPackageVersion).option('-i, init [name]', '初始化项�
 
 if (program.init) {
     const spinner = ora('正在下载').start()
-    download('http://tfs.staff.xdf.cn/tfs/NIS/usercenter/_git/frontend-template', program.init, function (err) {
+    download('Kunkka0229/frontend-template', program.init, function (err) {
         if (!err) {
             fs.readFile(`${process.cwd()}/${program.init}/package.json`, (err, data) => {
                 if (err) throw err
@@ -22,11 +22,13 @@ if (program.init) {
                 let str = JSON.stringify(_data, null, 4)
                 fs.writeFile(`${process.cwd()}/${program.init}/package.json`, str, function (err) {
                     if (!err) {
-                        console.info(chalk.blueBright('下载成功'))
+                        spinner.succeed(chalk.blueBright('下载成功'))
+                        spinner.stop()
                     }
                 })
             })
         } else {
+            console.error(error)
             // 可以输出一些项目失败的信息
         }
     })
