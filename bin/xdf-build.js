@@ -7,7 +7,6 @@ const chalk = require('chalk')
 const ora = require('ora')
 
 const requiredPackageVersion = require('../package.json').version
-const create = require('./create')
 const { clearConsole } = require('./util/index')
 
 program.version(requiredPackageVersion).option('-i, init [name]', '初始化项目').parse(process.argv)
